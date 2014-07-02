@@ -148,7 +148,7 @@ p.description {
 
 footer {
   text-align: center;
-  height: 480px;
+  height: 280px;
   background: RGBA(212, 218, 223, 0.4);
   border-top: solid 2px RGBA(212, 218, 223, 1);
   color: RGBA(95, 109, 128, 1);
@@ -306,7 +306,7 @@ ol > li > h3 {
   font-style: italic; }
 
 .text-footer {
-  height: 60px;
+  height: 80px;
   text-align: center; }
   .text-footer ul {
     list-style: none;
