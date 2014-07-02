@@ -1,0 +1,328 @@
+
+$primary-color: RGBA(226, 107, 43, 1)
+$secondary-color: RGBA(82, 113, 136, 1)
+$background-color: RGBA(241, 241, 241, 1)
+$canvas-color: RGBA(255, 255, 255, 1)
+// $alert-color: #f04124;
+// $success-color: #43AC6A;
+// $warning-color: #f08a24;
+// $info-color: #a0d3e8;
+html
+	// -webkit-text-stroke-width: .05px
+	// -webkit-text-stroke-color: white
+	-webkit-font-smoothing: antialiased
+body
+	background-color: $background-color
+
+a
+	color: #111
+	&:hover
+		color: $primary-color
+	&.button
+		background-color: $primary-color
+		&:hover
+			background-color: $secondary-color
+a.more 
+	margin: 0 1.8rem 0.8rem 0
+	font-size: 13px
+	color: RGBA(0, 136, 204, 1)
+	i
+		font-size: 8px
+	&:hover
+		text-decoration: underline
+i.mini
+	font-size: 11px
+input
+	-webkit-appearance: none
+	-webkit-border-radius: 0 
+	border-radius: 0
+	&:focus
+		box-shadow: 0 0 0px #999999 !important
+		border-color: $primary-color !important
+// Google Ad Formats
+.ads[role="billboard"]
+	width: 970px
+	height: 250px
+.ads[role="large-leader"]
+	width: 728px
+	height: 90px 
+.ads[role="medium-leader"]
+	width: 468px
+	height: 60px 
+	margin: 14px auto
+.ads[role="large-rectangle"]
+	width: 336px
+	height: 280px
+.ads[role="medium-rectangle"]
+	width: 300px
+	height: 250px
+	margin-top: 15px
+.ads[role="sky-scrapper"]
+	width: 160px
+	height: 600px
+.footer-ad
+	margin: 20px auto
+	display: block
+header ul, .content ul, .read-heading ul
+	list-style: none
+header ul#main-nav
+	padding-left: 0
+	padding-top: 18px
+#topbar
+	padding: 20px 0
+	& .ads
+		margin-top: 10px
+#navbar
+	background-color: $canvas-color
+	vertical-align: text-top
+	// & .search
+	// 	padding-top: 10px
+
+.top-bar-section .has-dropdown.not-click:hover > .dropdown
+	border: solid 1px $background-color
+	border-top: none
+a.logo
+	font-size: 1.4rem
+	color: $primary-color !important
+	font-weight: 600 !important
+.intro
+	background: url("http://genk2.vcmedia.vn/DlBlzccccccccccccE5CT3hqq3xN9o/Image/2013/03/wall_bkp-7a4ae.jpg") 0px -340px
+	opacity: 0.8
+	text-align: center
+	width: 100%
+	font-size: 2.4rem
+	font-weight: bold
+	height: 440px
+	padding: 20px
+	position: absolute
+	z-index: -9999
+	color: #ccc
+.main
+	background-color: #fff
+	margin-top: 60px
+	h2
+		text-transform: uppercase
+		font-size: 1.1rem
+		font-weight: 700
+		color: RGBA(226, 107, 43, 1)
+		padding: 14px 0
+		span.tab > a
+			color: #ccc
+			&:hover
+				color: #111
+	h3.title
+		font-size: 1.2rem
+		padding: 7px
+		font-weight: 600
+		margin-bottom: 0
+.th img
+	// height: 240px
+	// width: 220px
+span.details
+	font-size: 0.8rem
+	padding: 1px 4px
+	&:last-of-type
+		&:before
+			color: #666
+			content: '\00B7'
+			margin: 0 4px 0 -4px
+	a
+		color: #333
+		&:hover
+			color: $primary-color
+p.description
+	font-size: 0.9rem
+	line-height: 1.4rem
+	color: RGBA(141, 154, 165, 1)
+	padding-top: 7px
+.categories 
+	ul
+		margin-left: 0px
+	li
+		padding: 7px 0
+	i
+		margin-right: 7px
+		color: $primary-color
+footer
+	text-align: center
+	height: 480px
+	background: RGBA(212, 218, 223, 0.4)
+	border-top: solid 2px RGBA(212, 218, 223, 1)
+	color: RGBA(95, 109, 128, 1)
+	padding-top: 30px
+	p
+		display: block
+		margin-top: 20px
+// TOP LIST
+.mini-thumb
+	background: #fff
+	height: 80px
+	width: 60px
+	margin-right: 9px
+	float: left
+	margin-bottom: 7px
+	border: solid 1px #eee
+	padding: 2px	
+
+ol
+	counter-reset: li 
+	margin-left: 0 
+	padding-left: 0 
+	h3
+		font-size: 0.8rem
+		font-weight: 600
+		line-height: 1.4rem
+		padding-top: 5px
+	i
+		position: relative
+		left: -32px
+		top: 5px
+		font-style: normal
+		font-size: 0.7rem
+		font-weight: bold
+		border-radius: 2px
+		padding: 2px 5px
+		&.ended
+			background: RGBA(254, 204, 106, 1)
+			color: RGBA(183, 122, 3, 1)
+		&.chap
+			left: 5px
+			top: 75px
+			background: RGBA(168, 186, 110, 1)
+			color: #fff
+ol > li
+	position: relative 
+	margin: 0 0 6px 2em 
+	padding: 8px 12px 
+	list-style: none 
+	height: 100px
+	&:hover
+		cursor: pointer
+		background: RGBA(226, 107, 43, 0.2)
+
+ol > li.top3:before
+	background: RGBA(226, 107, 43, 1)
+	border-top: solid 2px #F1605A
+
+ol > li:before 
+	content: counter(li) 
+	counter-increment: li 
+	position: absolute
+	top: 8px
+	left: -1.4em
+	box-sizing: border-box
+	padding: 2px 6px 4px 6px
+	border-top: 2px solid #666
+	color: #fff
+	background: #666
+	font-weight: bold
+	text-align: center
+	border-radius: 2px
+li ol, li ul 
+	margin-top: 6px
+ol ol li:last-child
+	margin-bottom: 0
+
+ol > li > h3
+	margin: 5px auto
+
+// READ
+.read-heading
+	height: 60px
+	text-shadow: 1px 1px #fff
+	nav, li.dschuong
+		position: relative
+		top: 14px
+	li.dschuong
+		top: 18px
+.read-title
+	width: 70%
+	margin: 2rem auto
+	text-align: center
+.read-banner
+	background: #fff
+	.ads
+		margin: 20px auto
+#dschuong
+	list-style: none
+	background: #fff
+	padding: 21px
+	top: 0
+	left: -400px
+	opacity: 0
+	position: fixed
+	overflow-y: scroll
+	bottom: 0px
+	margin: 0
+	z-index: 999999
+	transition: all 0.3s ease-in-out
+	&.display
+		left: 0px
+		opacity: 1
+	li
+		overflow: hidden
+		padding-bottom: 4px
+		margin-bottom: 7px
+	a
+		float: right
+		display: block
+		position: relative
+		bottom: -4px
+		color: RGBA(58, 94, 119, 1)
+	span
+		float: left
+		display: block
+		position: relative
+		bottom: -4px
+		padding: 0 2px 3px 0
+
+.text-wrap
+	background: #fff
+	color: RGBA(36, 36, 74, 1)
+.text-content
+	display: block
+	margin: 0 auto
+	padding: 7px
+	width: 97%
+	padding: 0 13%
+	p
+		line-height: 2.2rem
+		font-size: 1.4rem
+.short-description
+	p
+		font-family: georgia
+		color: RGBA(36, 36, 74, 1)
+		font-size: 1.2rem
+		padding: 2rem
+		font-style: italic
+.text-footer
+	height: 60px
+	text-align: center
+	ul
+		list-style: none
+		padding-left: 0
+	i
+		padding: 7px
+@media only screen and (max-width: 40em) 
+	.ads
+		display: none
+	.short-description
+		p
+			font-family: georgia
+			color: RGBA(36, 36, 74, 1)
+			font-size: 1rem
+			padding: 2%
+			font-style: italic
+	.text-content
+		padding: 0 2%
+		p
+			line-height: 1.8rem
+			font-size: 1rem
+	// .read-heading
+	// 	li.dschuong
+	// 		top: -14px
+	// .dschuong
+	// 	span
+	// 		display: none
+	.breadcrumbs
+		display: none
