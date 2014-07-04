@@ -148,11 +148,10 @@ p.description {
 
 footer {
   text-align: center;
-  height: 280px;
   background: RGBA(212, 218, 223, 0.4);
   border-top: solid 2px RGBA(212, 218, 223, 1);
   color: RGBA(95, 109, 128, 1);
-  padding-top: 30px; }
+  padding: 30px; }
   footer p {
     display: block;
     margin-top: 20px; }
@@ -314,6 +313,87 @@ ol > li > h3 {
   .text-footer i {
     padding: 7px; }
 
+.top-left ul {
+  margin-top: 20px;
+  margin-left: 0px;
+  background: #fdfdfd;
+  border-top: solid 1px RGBA(226, 107, 43, 1);
+  border-right: solid 1px #eeeeee;
+  border-left: solid 1px #eeeeee;
+  width: 160px; }
+.top-left h2 {
+  font-size: 0.9rem;
+  background: white;
+  color: RGBA(226, 107, 43, 1);
+  border-bottom: solid 1px #eeeeee;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  box-shadow: 0px 2px 0 #fcfafa; }
+.top-left span {
+  background: white;
+  padding: 0px 6px;
+  margin: 0 4px;
+  color: RGBA(82, 113, 136, 1);
+  border-radius: 2px;
+  font-weight: 700; }
+.top-left li.item {
+  font-size: 0.8rem;
+  padding: 7px 2px;
+  padding-right: 8px;
+  border-bottom: dashed 1px #eeeeee;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.category-list h2 {
+  color: RGBA(82, 113, 136, 1);
+  margin-left: 20px;
+  border-bottom: solid 1px RGBA(82, 113, 136, 1);
+  margin-top: 14px;
+  margin-bottom: 21px; }
+.category-list .thumb {
+  background: white;
+  height: 140px;
+  width: 90px;
+  margin-right: 9px;
+  float: left;
+  margin-bottom: 7px;
+  border: solid 1px #eeeeee;
+  padding: 2px; }
+.category-list li:first-child {
+  margin-top: -14px; }
+.category-list li:last-child {
+  margin-top: 14px; }
+
+.category-item {
+  display: block;
+  width: 100%;
+  float: left;
+  border-bottom: dashed 1px #eeeeee;
+  padding-bottom: 14px;
+  padding-top: 14px; }
+  .category-item h3 {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: 700; }
+    .category-item h3 a {
+      color: RGBA(226, 107, 43, 1); }
+
+.category-item-description {
+  color: #777777; }
+  .category-item-description p {
+    font-size: 0.8rem;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+.read-button {
+  float: right; }
+  .read-button a {
+    color: RGBA(82, 113, 136, 1); }
+    .read-button a:hover {
+      color: RGBA(226, 107, 43, 1); }
+
 @media only screen and (max-width: 40em) {
   .ads {
     display: none; }
@@ -332,4 +412,12 @@ ol > li > h3 {
       font-size: 1rem; }
 
   .breadcrumbs {
-    display: none; } }
+    display: none; }
+
+  .top-left ul {
+    width: auto; }
+
+  .category-list ul, .category-list h2 {
+    margin-left: 0px; }
+  .category-list h2 {
+    margin-top: -20px; } }

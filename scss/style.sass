@@ -145,11 +145,11 @@ p.description
 		color: $primary-color
 footer
 	text-align: center
-	height: 280px
+	
 	background: RGBA(212, 218, 223, 0.4)
 	border-top: solid 2px RGBA(212, 218, 223, 1)
 	color: RGBA(95, 109, 128, 1)
-	padding-top: 30px
+	padding: 30px
 	p
 		display: block
 		margin-top: 20px
@@ -303,6 +303,87 @@ ol > li > h3
 		padding-left: 0
 	i
 		padding: 7px
+// CATEGORIES
+.top-left
+	ul
+		margin-top: 20px
+		margin-left: 0px
+		background: #FDFDFD
+		border-top: solid 1px $primary-color
+		border-right: solid 1px #eee
+		border-left: solid 1px #eee
+		width: 160px
+	h2
+		font-size: 0.9rem
+		background: #fff
+		color: $primary-color
+		border-bottom: solid 1px #eee
+		// border-right: solid 1px #eee
+		// border-left: solid 1px #eee
+		text-align: center
+		margin-top: 0px
+		margin-bottom: 0px
+		box-shadow: 0px 2px 0 #FCFAFA
+	span
+		background: #fff
+		padding: 0px 6px
+		margin: 0 4px
+		color: $secondary-color
+		border-radius: 2px
+		font-weight: 700
+	li.item
+		font-size: 0.8rem
+		padding: 7px 2px
+		padding-right: 8px
+		border-bottom: dashed 1px #eee
+		text-overflow: ellipsis
+		overflow: hidden
+		white-space: nowrap
+.category-list
+	h2
+		color: $secondary-color
+		margin-left: 20px
+		border-bottom: solid 1px $secondary-color
+		margin-top: 14px
+		margin-bottom: 21px
+	.thumb
+		background: #fff
+		height: 140px
+		width: 90px
+		margin-right: 9px
+		float: left
+		margin-bottom: 7px
+		border: solid 1px #eee
+		padding: 2px
+	li:first-child
+		margin-top: -14px
+	li:last-child
+		margin-top: 14px
+.category-item
+	display: block
+	width: 100%
+	float: left
+	border-bottom: dashed 1px #eee
+	padding-bottom: 14px
+	padding-top: 14px
+	h3
+		font-size: 1rem
+		margin: 0
+		font-weight: 700
+		a
+			color: $primary-color
+.category-item-description
+	color: #777
+	p
+		font-size: 0.8rem
+		overflow: hidden
+		text-overflow: ellipsis
+.read-button
+	float: right
+	a
+		color: $secondary-color
+		&:hover
+			color: $primary-color
 @media only screen and (max-width: 40em) 
 	.ads
 		display: none
@@ -326,3 +407,12 @@ ol > li > h3
 	// 		display: none
 	.breadcrumbs
 		display: none
+	// CATEGORIES
+	.top-left
+		ul
+			width: auto
+	.category-list
+		ul, h2
+			margin-left: 0px
+		h2
+			margin-top: -20px
