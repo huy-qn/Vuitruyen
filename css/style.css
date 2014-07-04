@@ -171,10 +171,16 @@ ol {
   margin-left: 0;
   padding-left: 0; }
   ol h3 {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 600;
-    line-height: 1.4rem;
-    padding-top: 5px; }
+    line-height: 1.2rem;
+    padding-top: 5px;
+    margin: -4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+    ol h3 a {
+      color: RGBA(82, 113, 136, 1); }
   ol i {
     position: relative;
     left: -32px;
@@ -199,9 +205,6 @@ ol > li {
   padding: 8px 12px;
   list-style: none;
   height: 100px; }
-  ol > li:hover {
-    cursor: pointer;
-    background: RGBA(226, 107, 43, 0.2); }
 
 ol > li.top3:before {
   background: RGBA(226, 107, 43, 1);
@@ -229,7 +232,7 @@ ol ol li:last-child {
   margin-bottom: 0; }
 
 ol > li > h3 {
-  margin: 5px auto; }
+  margin: 0px auto; }
 
 .read-heading {
   height: 60px;

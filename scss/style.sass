@@ -169,10 +169,16 @@ ol
 	margin-left: 0 
 	padding-left: 0 
 	h3
-		font-size: 0.8rem
+		font-size: 1rem
 		font-weight: 600
-		line-height: 1.4rem
+		line-height: 1.2rem
 		padding-top: 5px
+		margin: -4px
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+		a
+			color: $secondary-color
 	i
 		position: relative
 		left: -32px
@@ -196,9 +202,9 @@ ol > li
 	padding: 8px 12px 
 	list-style: none 
 	height: 100px
-	&:hover
-		cursor: pointer
-		background: RGBA(226, 107, 43, 0.2)
+	// &:hover
+	// 	cursor: pointer
+	// 	background: RGBA(226, 107, 43, 0.2)
 
 ol > li.top3:before
 	background: RGBA(226, 107, 43, 1)
@@ -224,8 +230,7 @@ ol ol li:last-child
 	margin-bottom: 0
 
 ol > li > h3
-	margin: 5px auto
-
+	margin: 0px auto
 // READ
 .read-heading
 	height: 60px
