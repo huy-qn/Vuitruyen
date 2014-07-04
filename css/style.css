@@ -406,7 +406,7 @@ ol > li > h3 {
     font-style: italic; }
 
   .text-content {
-    padding: 0 2%; }
+    padding: 0 0.6rem; }
     .text-content p {
       line-height: 1.8rem;
       font-size: 1.2rem; }
