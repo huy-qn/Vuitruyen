@@ -152,9 +152,11 @@ footer {
   border-top: solid 2px RGBA(212, 218, 223, 1);
   color: RGBA(95, 109, 128, 1);
   padding: 30px; }
-  footer p {
-    display: block;
+  footer .copy {
     margin-top: 20px; }
+  footer span {
+    display: block;
+    line-height: 1.6rem; }
 
 .mini-thumb {
   background: white;
