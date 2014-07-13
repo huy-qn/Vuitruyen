@@ -1,6 +1,11 @@
 
 $primary-color: RGBA(226, 107, 43, 1)
+$primary-highlight: #EE3322
 $secondary-color: RGBA(82, 113, 136, 1)
+$secondary-highlight: #5F77EE
+$normalize-color: #7E7E7E
+$normalize-highlight: #111
+$text-color: #111
 $background-color: RGBA(241, 241, 241, 1)
 $canvas-color: RGBA(255, 255, 255, 1)
 // $alert-color: #f04124;
@@ -15,13 +20,17 @@ body
 	background-color: $background-color
 
 a
-	color: #111
+	color: $text-color
 	&:hover
 		color: $primary-color
 	&.button
 		background-color: $primary-color
 		&:hover
 			background-color: $secondary-color
+a.read
+	color: $secondary-color !important
+	&:hover
+		color: $secondary-highlight !important
 a.more 
 	margin: 0 1.8rem 0.8rem 0
 	font-size: 13px
@@ -155,6 +164,8 @@ footer
 		display: block
 		line-height: 1.6rem
 // TOP LIST
+.sidebar .category-item
+	border-bottom: none
 .mini-thumb
 	background: #fff
 	height: 80px
@@ -180,23 +191,11 @@ ol
 		white-space: nowrap
 		a
 			color: $secondary-color
-	i
-		position: relative
-		left: -32px
-		top: 5px
-		font-style: normal
-		font-size: 0.7rem
-		font-weight: bold
-		border-radius: 2px
-		padding: 2px 5px
-		&.ended
-			background: RGBA(254, 204, 106, 1)
-			color: RGBA(183, 122, 3, 1)
-		&.chap
-			left: 5px
-			top: 75px
-			background: RGBA(168, 186, 110, 1)
-			color: #fff
+	span
+		font-size: 0.8rem
+		color: $normalize-color
+		a
+			color: $normalize-color
 ol > li
 	position: relative 
 	margin: 0 0 6px 2em 
@@ -249,6 +248,37 @@ ol > li > h3
 	background: #fff
 	.ads
 		margin: 20px auto
+#fic-list
+	margin-top: 14px
+.fic-top
+	padding-left: 35px
+ul.pagination
+	li
+		height: 30px
+		margin-bottom: 0px
+		margin-top: 14px
+.fic-list
+	padding-left: 21px
+	border-left: solid 1px #eee
+	h4
+		font-weight: bold
+		color: $secondary-color
+	li
+		overflow: hidden
+		padding-bottom: 4px
+		margin-bottom: 7px
+	a
+		float: right
+		display: block
+		position: relative
+		bottom: -4px
+		color: RGBA(58, 94, 119, 1)
+	span
+		float: left
+		display: block
+		position: relative
+		bottom: -4px
+		padding: 0 2px 3px 0
 #dschuong
 	list-style: none
 	background: #fff
@@ -310,7 +340,7 @@ ol > li > h3
 	i
 		padding: 7px
 // CATEGORIES
-.top-left
+.top-left,
 	ul
 		margin-top: 20px
 		margin-left: 0px
@@ -319,7 +349,7 @@ ol > li > h3
 		border-right: solid 1px #eee
 		border-left: solid 1px #eee
 		width: 160px
-	h2
+	h2, h4
 		font-size: 0.9rem
 		background: #fff
 		color: $primary-color
@@ -330,6 +360,9 @@ ol > li > h3
 		margin-top: 0px
 		margin-bottom: 0px
 		box-shadow: 0px 2px 0 #FCFAFA
+	h4
+		padding: 7px 0
+		font-size: 1rem
 	span
 		background: #fff
 		padding: 0px 6px
@@ -354,8 +387,8 @@ ol > li > h3
 		margin-bottom: 21px
 	.thumb
 		background: #fff
-		height: 140px
-		width: 90px
+		// height: 280px
+		// width: 180px
 		margin-right: 9px
 		float: left
 		margin-bottom: 7px
@@ -365,33 +398,81 @@ ol > li > h3
 		margin-top: -14px
 	li:last-child
 		margin-top: 14px
-.category-item
+.category-item, .fic-item
 	display: block
 	width: 100%
 	float: left
 	border-bottom: dashed 1px #eee
 	padding-bottom: 14px
 	padding-top: 14px
+	span
+		display: block
+		font-size: 0.8rem
+		color: #aaa
+		line-height: 1.5rem
+		font-weight: bold
+		a
+			color: #aaa
+			&:hover
+				color: #333
 	h3
-		font-size: 1rem
-		margin: 0
+		font-size: 1.6rem
+		margin: 7px 0
 		font-weight: 700
 		a
 			color: $primary-color
+			&:hover
+				color: $primary-highlight
+.fic-item
+	margin-bottom: 14px
 .category-item-description
 	color: #777
 	p
 		font-size: 0.8rem
 		overflow: hidden
 		text-overflow: ellipsis
+		height: 80px
+.fic-item
+	padding: 28px 0
+.fic-item-details
+	margin-bottom: 14px
+	span
+		font-size: 1rem
+		color: $normalize-color
+	a
+		color: $secondary-color !important
+		&:hover
+			color: $primary-color !important
+	i
+		padding-right: 7px
+#more
+	display: none
 .read-button
 	float: right
 	a
 		color: $secondary-color
 		&:hover
 			color: $primary-color
+//AUTHOR
+.author-box
+	margin-top: 40px
+	p
+		padding: 14px
+		color: $normalize-highlight
+		margin-bottom: 0px
+		font-size: 1rem
+	h4
+		font-weight: bold
+		color: $secondary-color
+	span
+		color: $primary-color
+		text-transform: uppercase
+		font-size: 0.7rem
+		font-weight: bold
 @media only screen and (max-width: 40em) 
 	.ads
+		display: none
+	.sticky-wrapper
 		display: none
 	.short-description
 		p
@@ -414,7 +495,7 @@ ol > li > h3
 	.breadcrumbs
 		display: none
 	// CATEGORIES
-	.top-left
+	.top-left,
 		ul
 			width: auto
 	.category-list
@@ -422,3 +503,17 @@ ol > li > h3
 			margin-left: 0px
 		h2
 			margin-top: -20px
+		.thumb
+			background: #fff
+			width: 100%
+			height: auto
+			margin-right: 9px
+			float: left
+			margin-bottom: 7px
+			border: solid 1px #eee
+			padding: 2px
+	.author-box
+		h4
+			font-size: 1.6rem
+			font-weight: bold
+			color: $primary-color
