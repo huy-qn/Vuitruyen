@@ -21,10 +21,12 @@ a.read {
     color: #5F77EE !important; }
 
 .prev-page {
-  top: 620px; }
+  left: 319px; }
+
+.next-page {
+  right: 319px; }
 
 .next-page, .prev-page {
-  right: 320px;
   position: fixed;
   padding: 0.8rem; }
   .next-page:hover, .prev-page:hover {
