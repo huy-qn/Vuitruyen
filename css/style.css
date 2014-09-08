@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   -webkit-font-smoothing: antialiased; }
 
@@ -5,7 +6,7 @@ body {
   background-color: RGBA(241, 241, 241, 1); }
 
 a {
-  color: #111111; }
+  color: #111; }
   a:hover {
     color: RGBA(226, 107, 43, 1); }
   a.button {
@@ -14,9 +15,26 @@ a {
       background-color: RGBA(82, 113, 136, 1); }
 
 a.read {
-  color: RGBA(82, 113, 136, 1) !important; }
+  color: RGBA(82, 113, 136, 1) !important;
+  display: block; }
   a.read:hover {
-    color: #5f77ee !important; }
+    color: #5F77EE !important; }
+
+.prev-page {
+  top: 620px; }
+
+.next-page, .prev-page {
+  right: 320px;
+  position: fixed;
+  padding: 0.8rem; }
+  .next-page:hover, .prev-page:hover {
+    background: #f1f1f1; }
+
+.display {
+  display: visible; }
+
+.none {
+  display: none; }
 
 a.more {
   margin: 0 1.8rem 0.8rem 0;
@@ -64,6 +82,10 @@ input {
   width: 160px;
   height: 600px; }
 
+.ads[role="larg-esky-scrapper"] {
+  width: 300px;
+  height: 600px; }
+
 .footer-ad {
   margin: 20px auto;
   display: block; }
@@ -104,21 +126,21 @@ a.logo {
   padding: 20px;
   position: absolute;
   z-index: -9999;
-  color: #cccccc; }
+  color: #ccc; }
 
 .main {
-  background-color: white;
+  background-color: #fff;
   margin-top: 60px; }
   .main h2 {
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: 700;
     color: RGBA(226, 107, 43, 1);
     padding: 14px 0; }
     .main h2 span.tab > a {
-      color: #cccccc; }
+      color: #ccc; }
       .main h2 span.tab > a:hover {
-        color: #111111; }
+        color: #111; }
   .main h3.title {
     font-size: 1.2rem;
     padding: 7px;
@@ -129,11 +151,11 @@ span.details {
   font-size: 0.8rem;
   padding: 1px 4px; }
   span.details:last-of-type:before {
-    color: #666666;
-    content: "\00B7";
+    color: #666;
+    content: "·";
     margin: 0 4px 0 -4px; }
   span.details a {
-    color: #333333; }
+    color: #333; }
     span.details a:hover {
       color: RGBA(226, 107, 43, 1); }
 
@@ -167,13 +189,13 @@ footer {
   border-bottom: none; }
 
 .mini-thumb {
-  background: white;
+  background: #fff;
   height: 80px;
   width: 60px;
   margin-right: 9px;
   float: left;
   margin-bottom: 7px;
-  border: solid 1px #eeeeee;
+  border: solid 1px #eee;
   padding: 2px; }
 
 ol {
@@ -193,9 +215,9 @@ ol {
       color: RGBA(82, 113, 136, 1); }
   ol span {
     font-size: 0.8rem;
-    color: #7e7e7e; }
+    color: #aaa; }
     ol span a {
-      color: #7e7e7e; }
+      color: #aaa; }
 
 ol > li {
   position: relative;
@@ -206,7 +228,7 @@ ol > li {
 
 ol > li.top3:before {
   background: RGBA(226, 107, 43, 1);
-  border-top: solid 2px #f1605a; }
+  border-top: solid 2px #F1605A; }
 
 ol > li:before {
   content: counter(li);
@@ -216,9 +238,9 @@ ol > li:before {
   left: -1.4em;
   box-sizing: border-box;
   padding: 2px 6px 4px 6px;
-  border-top: 2px solid #666666;
-  color: white;
-  background: #666666;
+  border-top: 2px solid #666;
+  color: #fff;
+  background: #666;
   font-weight: bold;
   text-align: center;
   border-radius: 2px; }
@@ -234,7 +256,7 @@ ol > li > h3 {
 
 .read-heading {
   height: 60px;
-  text-shadow: 1px 1px white; }
+  text-shadow: 1px 1px #fff; }
   .read-heading nav, .read-heading li.dschuong {
     position: relative;
     top: 14px; }
@@ -247,7 +269,7 @@ ol > li > h3 {
   text-align: center; }
 
 .read-banner {
-  background: white; }
+  background: #fff; }
   .read-banner .ads {
     margin: 20px auto; }
 
@@ -264,7 +286,7 @@ ul.pagination li {
 
 .fic-list {
   padding-left: 21px;
-  border-left: solid 1px #eeeeee; }
+  border-left: solid 1px #eee; }
   .fic-list h4 {
     font-weight: bold;
     color: RGBA(82, 113, 136, 1); }
@@ -287,7 +309,7 @@ ul.pagination li {
 
 #dschuong {
   list-style: none;
-  background: white;
+  background: #fff;
   padding: 21px;
   top: 0;
   left: -400px;
@@ -319,8 +341,10 @@ ul.pagination li {
     padding: 0 2px 3px 0; }
 
 .text-wrap {
-  background: white;
+  background: #fff;
   color: RGBA(36, 36, 74, 1); }
+  .text-wrap:hover {
+    cursor: pointer; }
 
 .text-content {
   display: block;
@@ -349,76 +373,87 @@ ul.pagination li {
     padding: 7px; }
 
 .top-left ul {
+  width: 160px; }
+
+.top-left ul, .tag-left ul {
   margin-top: 20px;
   margin-left: 0px;
-  background: #fdfdfd;
+  background: #FDFDFD;
   border-top: solid 1px RGBA(226, 107, 43, 1);
-  border-right: solid 1px #eeeeee;
-  border-left: solid 1px #eeeeee;
-  width: 160px; }
-.top-left h2, .top-left h4 {
+  border-right: solid 1px #eee;
+  border-left: solid 1px #eee; }
+.top-left h2, .top-left h4, .tag-left h2, .tag-left h4 {
   font-size: 0.9rem;
-  background: white;
+  background: #fff;
   color: RGBA(226, 107, 43, 1);
-  border-bottom: solid 1px #eeeeee;
+  border-bottom: solid 1px #eee;
   text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
-  box-shadow: 0px 2px 0 #fcfafa; }
-.top-left h4 {
+  box-shadow: 0px 2px 0 #FCFAFA; }
+.top-left h4, .tag-left h4 {
   padding: 7px 0;
   font-size: 1rem; }
-.top-left span {
-  background: white;
+.top-left span, .tag-left span {
+  background: #fff;
   padding: 0px 6px;
   margin: 0 4px;
   color: RGBA(82, 113, 136, 1);
   border-radius: 2px;
   font-weight: 700; }
-.top-left li.item {
+.top-left li.item, .tag-left li.item {
   font-size: 0.8rem;
   padding: 7px 2px;
   padding-right: 8px;
-  border-bottom: dashed 1px #eeeeee;
+  border-bottom: dashed 1px #eee;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap; }
 
-.category-list h2 {
-  color: RGBA(82, 113, 136, 1);
-  margin-left: 20px;
-  border-bottom: solid 1px RGBA(82, 113, 136, 1);
-  margin-top: 14px;
-  margin-bottom: 21px; }
-.category-list .thumb {
-  background: white;
-  margin-right: 9px;
-  float: left;
-  margin-bottom: 7px;
-  border: solid 1px #eeeeee;
-  padding: 2px; }
-.category-list li:first-child {
-  margin-top: -14px; }
-.category-list li:last-child {
-  margin-top: 14px; }
+.category-list {
+  border-left: solid 1px #eee; }
+  .category-list h2 {
+    color: RGBA(82, 113, 136, 1);
+    margin-left: 20px;
+    border-bottom: solid 1px RGBA(82, 113, 136, 1);
+    margin-top: 14px;
+    margin-bottom: 21px; }
+  .category-list .thumb {
+    background: #fff;
+    margin-right: 9px;
+    float: left;
+    margin-bottom: 7px;
+    border: solid 1px #eee;
+    padding: 2px; }
+  .category-list li:first-child {
+    margin-top: -14px; }
+  .category-list li:last-child {
+    margin-top: 14px; }
 
 .category-item, .fic-item {
   display: block;
   width: 100%;
   float: left;
-  border-bottom: dashed 1px #eeeeee;
+  border-bottom: dashed 1px #eee;
   padding-bottom: 14px;
   padding-top: 14px; }
   .category-item span, .fic-item span {
     display: block;
     font-size: 0.8rem;
-    color: #aaaaaa;
+    color: #aaa;
     line-height: 1.5rem;
     font-weight: bold; }
     .category-item span a, .fic-item span a {
-      color: #aaaaaa; }
+      color: #aaa; }
       .category-item span a:hover, .fic-item span a:hover {
-        color: #333333; }
+        color: #333; }
+      .category-item span a.active, .fic-item span a.active {
+        color: #333;
+        font-weight: bold; }
+  .category-item .read, .fic-item .read {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0.8rem; }
   .category-item h3, .fic-item h3 {
     font-size: 1.6rem;
     margin: 7px 0;
@@ -426,18 +461,18 @@ ul.pagination li {
     .category-item h3 a, .fic-item h3 a {
       color: RGBA(226, 107, 43, 1); }
       .category-item h3 a:hover, .fic-item h3 a:hover {
-        color: #ee3322; }
+        color: #EE3322; }
 
 .fic-item {
   margin-bottom: 14px; }
 
 .category-item-description {
-  color: #777777; }
+  color: #777; }
   .category-item-description p {
     font-size: 0.8rem;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 80px; }
+    height: 60px; }
 
 .fic-item {
   padding: 28px 0; }
@@ -446,7 +481,7 @@ ul.pagination li {
   margin-bottom: 14px; }
   .fic-item-details span {
     font-size: 1rem;
-    color: #7e7e7e; }
+    color: #aaa; }
   .fic-item-details a {
     color: RGBA(82, 113, 136, 1) !important; }
     .fic-item-details a:hover {
@@ -468,7 +503,7 @@ ul.pagination li {
   margin-top: 40px; }
   .author-box p {
     padding: 14px;
-    color: #111111;
+    color: #333;
     margin-bottom: 0px;
     font-size: 1rem; }
   .author-box h4 {
@@ -511,13 +546,13 @@ ul.pagination li {
   .category-list h2 {
     margin-top: -20px; }
   .category-list .thumb {
-    background: white;
+    background: #fff;
     width: 100%;
     height: auto;
     margin-right: 9px;
     float: left;
     margin-bottom: 7px;
-    border: solid 1px #eeeeee;
+    border: solid 1px #eee;
     padding: 2px; }
 
   .author-box h4 {

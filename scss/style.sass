@@ -3,8 +3,8 @@ $primary-color: RGBA(226, 107, 43, 1)
 $primary-highlight: #EE3322
 $secondary-color: RGBA(82, 113, 136, 1)
 $secondary-highlight: #5F77EE
-$normalize-color: #7E7E7E
-$normalize-highlight: #111
+$normalize-color: #aaa
+$normalize-highlight: #333
 $text-color: #111
 $background-color: RGBA(241, 241, 241, 1)
 $canvas-color: RGBA(255, 255, 255, 1)
@@ -29,8 +29,21 @@ a
 			background-color: $secondary-color
 a.read
 	color: $secondary-color !important
+	display: block
 	&:hover
 		color: $secondary-highlight !important
+.prev-page
+	top: 620px
+.next-page,.prev-page
+	right: 320px
+	position: fixed
+	padding: .8rem
+	&:hover
+		background: #f1f1f1
+.display
+	display: visible
+.none
+	display: none
 a.more 
 	margin: 0 1.8rem 0.8rem 0
 	font-size: 13px
@@ -68,6 +81,9 @@ input
 	margin-top: 15px
 .ads[role="sky-scrapper"]
 	width: 160px
+	height: 600px
+.ads[role="larg-esky-scrapper"]
+	width: 300px
 	height: 600px
 .footer-ad
 	margin: 20px auto
@@ -111,7 +127,7 @@ a.logo
 	margin-top: 60px
 	h2
 		text-transform: uppercase
-		font-size: 1.1rem
+		font-size: 0.8rem
 		font-weight: 700
 		color: RGBA(226, 107, 43, 1)
 		padding: 14px 0
@@ -315,6 +331,8 @@ ul.pagination
 .text-wrap
 	background: #fff
 	color: RGBA(36, 36, 74, 1)
+	&:hover
+		cursor: pointer
 .text-content
 	display: block
 	margin: 0 auto
@@ -340,7 +358,10 @@ ul.pagination
 	i
 		padding: 7px
 // CATEGORIES
-.top-left,
+.top-left
+	ul
+		width: 160px
+.top-left, .tag-left
 	ul
 		margin-top: 20px
 		margin-left: 0px
@@ -348,7 +369,6 @@ ul.pagination
 		border-top: solid 1px $primary-color
 		border-right: solid 1px #eee
 		border-left: solid 1px #eee
-		width: 160px
 	h2, h4
 		font-size: 0.9rem
 		background: #fff
@@ -379,6 +399,7 @@ ul.pagination
 		overflow: hidden
 		white-space: nowrap
 .category-list
+	border-left: solid 1px #eee
 	h2
 		color: $secondary-color
 		margin-left: 20px
@@ -412,9 +433,16 @@ ul.pagination
 		line-height: 1.5rem
 		font-weight: bold
 		a
-			color: #aaa
+			color: $normalize-color
 			&:hover
-				color: #333
+				color: $normalize-highlight
+			&.active
+				color: $normalize-highlight
+				font-weight: bold
+	.read
+		font-size: 1rem
+		text-align: center
+		margin-top: 0.8rem
 	h3
 		font-size: 1.6rem
 		margin: 7px 0
@@ -431,7 +459,7 @@ ul.pagination
 		font-size: 0.8rem
 		overflow: hidden
 		text-overflow: ellipsis
-		height: 80px
+		height: 60px
 .fic-item
 	padding: 28px 0
 .fic-item-details

@@ -131,6 +131,9 @@
       </div>
       <div class="text-wrap row">
         <div class="text-content large-12 small-12">
+          <a href="" class="next-page none" title="Trang Sau"><i class="fa fa-angle-right fa-2x"></i></a>
+          <a href="" class="prev-page none" title="Trang Trước"><i class="fa fa-angle-left fa-2x"></i></a>
+
           <span href="" data-tooltip title="Đánh dấu trang" class="bookmark has-tip right"><i class="fa fa-bookmark-o fa-2x"></i></span>
           <h2 class="read-title">Không Yêu Xin Đừng Nói Lời Cay Đắng Nhé Anh</h2>
           <div class="short-description">
@@ -171,6 +174,13 @@
       });
       $('.bookmark').click(function(){
         $(this).find('i').toggleClass('fa-bookmark fa-bookmark-o')
+      });
+      $(document).ready(function(){
+        $('.text-wrap').hover(function(){
+          console.log(1);
+          $('.next-page').toggleClass('display none');
+          $('.prev-page').toggleClass('display none');
+        });
       });
     </script>
   </body>
