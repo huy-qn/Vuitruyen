@@ -20,17 +20,26 @@ a.read {
   a.read:hover {
     color: #5F77EE !important; }
 
+span.read-button {
+  background: RGBA(226, 107, 43, 1);
+  margin-top: 7px;
+  padding: 3px 7px;
+  color: #fff !important;
+  text-align: center; }
+  span.read-button:hover {
+    background: #EE3322; }
+
 .prev-page {
-  left: 319px; }
+  left: 10px; }
 
 .next-page {
-  right: 319px; }
+  right: 10px; }
 
 .next-page, .prev-page {
+  background: #fff;
   position: fixed;
-  padding: 0.8rem; }
-  .next-page:hover, .prev-page:hover {
-    background: #f1f1f1; }
+  top: 45%;
+  padding: 0.4rem 1.4rem; }
 
 .display {
   display: visible; }
@@ -314,7 +323,7 @@ ul.pagination li {
   background: #fff;
   padding: 21px;
   top: 0;
-  left: -400px;
+  left: -700px;
   opacity: 0;
   position: fixed;
   overflow-y: scroll;
@@ -345,8 +354,6 @@ ul.pagination li {
 .text-wrap {
   background: #fff;
   color: RGBA(36, 36, 74, 1); }
-  .text-wrap:hover {
-    cursor: pointer; }
 
 .text-content {
   display: block;

@@ -32,15 +32,23 @@ a.read
 	display: block
 	&:hover
 		color: $secondary-highlight !important
-.prev-page
-	left: 319px
-.next-page
-	right: 319px
-.next-page,.prev-page
-	position: fixed
-	padding: .8rem
+span.read-button
+	background: $primary-color
+	margin-top: 7px
+	padding: 3px 7px
+	color: #fff !important
+	text-align: center
 	&:hover
-		background: #f1f1f1
+		background: $primary-highlight
+.prev-page
+	left: 10px
+.next-page
+	right: 10px
+.next-page,.prev-page
+	background: #fff
+	position: fixed
+	top: 45%
+	padding: 0.4rem 1.4rem 
 .display
 	display: visible
 .none
@@ -301,7 +309,7 @@ ul.pagination
 	background: #fff
 	padding: 21px
 	top: 0
-	left: -400px
+	left: -700px
 	opacity: 0
 	position: fixed
 	overflow-y: scroll
@@ -332,8 +340,6 @@ ul.pagination
 .text-wrap
 	background: #fff
 	color: RGBA(36, 36, 74, 1)
-	&:hover
-		cursor: pointer
 .text-content
 	display: block
 	margin: 0 auto
